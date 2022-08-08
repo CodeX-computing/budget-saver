@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :users
+
+  root to: 'splash#index'
   resources :conversions
   resources :groups
   resources :users
