@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ConversionsController < ApplicationController
   before_action :set_conversion, only: %i[show edit update destroy]
 
