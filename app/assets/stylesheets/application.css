@@ -22,9 +22,9 @@
 .alert,
 .notice {
   border-radius: 5px;
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
