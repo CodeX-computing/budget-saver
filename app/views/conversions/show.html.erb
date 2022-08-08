@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @conversion %>
+
+<div>
+  <%= link_to "Edit this conversion", edit_conversion_path(@conversion) %> |
+  <%= link_to "Back to conversions", conversions_path %>
+
+  <%= button_to "Destroy this conversion", @conversion, method: :delete %>
+</div>
