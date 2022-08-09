@@ -1,8 +1,8 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Groups</h1>
-
 <div id="groups">
+  <div class="navbar">
+    <%= link_to "🢀", :back, class: 'back-link'%>
+    <p class='nav-text'>Category</p>
+  </div>
   <% @groups.each do |group| %>
     <%= render group %>
     <p>
