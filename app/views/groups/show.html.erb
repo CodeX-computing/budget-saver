@@ -1,10 +1,43 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @group %>
+<% @group.group_conversions.each do |group_conversion| %>
+<%= group_conversion.conversion.name %>
+<% end %>
 
-<div>
+
+
+ <%= form_with(model: GroupConversion.new, url: group_group_conversions_path(@group), method: :post) do |f| %>
+      <div>
+        
+        <%= f.collection_select :conversion_id,  @conversions, :id, :name %>
+      </div>
+      <%= f.submit 'Add ingredient' %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%
+=begin%>
+ <div>
   <%= link_to "Edit this group", edit_group_path(@group) %> |
   <%= link_to "Back to groups", groups_path %>
 
   <%= button_to "Destroy this group", @group, method: :delete %>
-</div>
+</div> 
+<%
+=end%>

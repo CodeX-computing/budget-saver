@@ -3,7 +3,8 @@ class ConversionsController < ApplicationController
 
   # GET /conversions or /conversions.json
   def index
-    @conversions = Conversion.all
+    @conversions = Conversion.where(author_id: current_user.id)
+    @group = Group.find(params[:group_id])
   end
 
   # GET /conversions/1 or /conversions/1.json
@@ -20,10 +21,10 @@ class ConversionsController < ApplicationController
   # POST /conversions or /conversions.json
   def create
     @conversion = Conversion.new(conversion_params)
-
+    @conversion.author_id = current_user.id
     respond_to do |format|
       if @conversion.save
-        format.html { redirect_to conversion_url(@conversion), notice: 'Conversion was successfully created.' }
+        format.html { redirect_to group_conversions_url(@conversion), notice: 'Conversion was successfully created.' }
         format.json { render :show, status: :created, location: @conversion }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +65,6 @@ class ConversionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def conversion_params
-    params.require(:conversion).permit(:authorId, :amount, :name, :User_id)
+    params.require(:conversion).permit(:author_id, :amount, :name)
   end
 end
