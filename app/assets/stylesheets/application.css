@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f1f1f1;
+}
+
 .alert,
 .notice {
   border-radius: 5px;

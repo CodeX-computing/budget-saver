@@ -1,3 +1,40 @@
+.category {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.category-unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.category-details  {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.category-details img {
+  margin-right: 20px;
+  min-width: 90px;
+  min-height: 90px;
+  border: 1px solid #ccc;
+  background-color: #3e3e3e8a;
+}
+
+.category-name {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.total-price {
+  margin-top: 15px;
+}
+
+
 .add-btn-container {
   padding: 10px;
   background-color: #5fb523;

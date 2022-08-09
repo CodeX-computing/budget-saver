@@ -1,22 +1,7 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= group.User_id %>
-  </p>
-
-  <p>
-    <strong>Conversion:</strong>
-    <%= group.conversion_id %>
-  </p>
-
+<div id="<%= dom_id group %>" class="category-unit">
+    <div class="category-details">
+      <img src=<%= group.icon %>" alt="<%= group.name %>" />
+      <%= link_to group.name, groups_path, class: 'category-name' %>
+    </div>
+    <p class="total-price">$200</p>
 </div>

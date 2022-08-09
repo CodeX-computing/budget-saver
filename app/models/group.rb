@@ -1,4 +1,4 @@
 class Group < ApplicationRecord
-  belongs_to :User
-  has_many :Conversion
+  belongs_to :user
+  has_many :conversion
 end

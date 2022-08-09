@@ -1,15 +1,17 @@
-<div id="groups">
+<div class="home-page">
   <div class="navbar">
-    <%= link_to "🢀", :back, class: 'back-link'%>
-    <p class='nav-text'>Category</p>
+      <%= link_to "🢀", :back, class: 'back-link'%>
+      <p class='nav-text'>Category</p>
+      <div></div>
   </div>
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
-  <% end %>
-<div class="add-btn-container">
-<%= button_to "Add a new category", new_group_path, class: 'add-btn', method: :get %>
-</div>
+  <div class="categories">
+    <% @groups.each do |group| %>
+    <div class="category">
+      <%= render group %>
+    </div>
+    <% end %>
+  </div>
+  <div class="add-btn-container">
+  <%= button_to "Add a new category", new_group_path, class: 'add-btn', method: :get %>
+  </div>
 </div>

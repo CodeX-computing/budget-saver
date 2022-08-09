@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
   # POST /groups or /groups.json
   def create
     @group = Group.new(group_params)
-    @group.user = current_user
+    @group.user_id = current_user.id
 
     respond_to do |format|
       if @group.save
