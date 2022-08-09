@@ -10,7 +10,7 @@
   align-items: flex-start;
 }
 
-.category-details  {
+.category-details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -35,7 +35,6 @@
 .total-price {
   margin-top: 15px;
 }
-
 
 .add-btn-container {
   padding: 10px;
