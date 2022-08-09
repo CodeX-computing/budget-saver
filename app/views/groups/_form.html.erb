@@ -1,27 +1,18 @@
 <%= form_with(model: group) do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
-
-      <ul>
         <% group.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <%= error.full_message %>
         <% end %>
-      </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <div class="navbar">
+      <%= link_to "🢀", :back, class: 'back-link'%>
+      <p class='nav-text'>NEW CATEGORY</p>
+      <%= form.submit class: 'login-submit-btn' %>
   </div>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="login-fields">
+    <%= form.text_field :icon, placeholder: 'icon url e.g: https://images.com/pic.png', class: 'login-field' %>
+    <%= form.text_field :name, placeholder: 'Category name', class: 'login-field' %>
   </div>
 <% end %>
