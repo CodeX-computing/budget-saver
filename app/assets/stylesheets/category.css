@@ -1,0 +1,22 @@
+.add-btn-container {
+  padding: 10px;
+  background-color: #5fb523;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-btn {
+  width: 90vw;
+  border: 2px #fff solid;
+  padding: 10px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}

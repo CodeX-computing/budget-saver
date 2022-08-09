@@ -9,6 +9,7 @@
       <%= link_to "Show this group", group %>
     </p>
   <% end %>
+<div class="add-btn-container">
+<%= button_to "Add a new category", new_group_path, class: 'add-btn', method: :get %>
 </div>
-
-<%= link_to "New group", new_group_path %>
+</div>
