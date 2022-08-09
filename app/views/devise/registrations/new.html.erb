@@ -3,7 +3,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="navbar">
-    <%= link_to "🢀", :back, class: 'back-link'%>
+    <%= link_to "🢀", '/', class: 'back-link'%>
     <p class='nav-text'>REGISTER</p>
     <%= f.submit 'Next', class: 'login-submit-btn'%>
   </div>

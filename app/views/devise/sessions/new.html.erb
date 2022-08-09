@@ -1,7 +1,7 @@
 <div class='login-page'>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <div class="navbar">
-  <%= link_to "🢀", :back, class: 'back-link'%>
+  <%= link_to "🢀", '/', class: 'back-link'%>
   <p class='nav-text'>LOGIN</p>
   <%= f.submit 'Log in', class: 'login-submit-btn'%>
 </div>
