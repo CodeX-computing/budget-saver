@@ -1,4 +1,4 @@
-<%= form_with(model: conversion) do |form| %>
+<%= form_with(model: conversion, url: group_conversions_path) do |form| %>
   <% if conversion.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(conversion.errors.count, "error") %> prohibited this conversion from being saved:</h2>

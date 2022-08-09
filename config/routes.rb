@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # resources :conversions
   resources :groups do
     resources :conversions
+    resources :group_conversions
   end
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

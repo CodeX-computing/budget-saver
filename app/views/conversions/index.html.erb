@@ -1,14 +1,18 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Conversions</h1>
 
 <div id="conversions">
-  <% @conversions.each do |conversion| %>
-    <%= render conversion %>
-    <p>
-      <%= link_to "Show this conversion", conversion %>
-    </p>
-  <% end %>
-</div>
+<% @group.group_conversions.each do |group_conversion| %>
+  <p>
+    <strong>Name:</strong>
+    <%= group_conversion.conversion.name %>
+  </p>
 
-<%= link_to "New conversion", new_conversion_path %>
+  <p>
+    <strong>Amount:</strong>
+    <%= group_conversion.conversion.amount %>
+  </p>
+<% end %>
+
+</div> 
+
+<%= link_to "New conversion", new_group_conversion_path %>
