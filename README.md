@@ -10,7 +10,7 @@ This app keps track of all your transctions
 
 ## Live Demo
 
-- [](https://budget-saver-app.herokuapp.com/)
+- [✨Budget Saver](https://budget-saver-app.herokuapp.com/)
 
 ## Getting Started
 
@@ -69,7 +69,7 @@ Ruby and rails installed on your local machine
 
 ## Credits
 
-- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+- Original design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
 
 ## 🤝 Contributing
 
