@@ -68,3 +68,44 @@
   width: 100%;
   cursor: pointer;
 }
+
+.edit-user-btn,
+.remove-user-btn {
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(62, 62, 62, 0.6);
+}
+
+.user-btns {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-btns-re {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.all-groups-btn {
+  padding: 100px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(62, 62, 62, 0.6);
+  margin: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #3e3e3e;
+  cursor: pointer;
+}
+
+.remove-user-btn {
+  background-color: #f00;
+  color: #fff;
+  margin-left: 10px;
+}
