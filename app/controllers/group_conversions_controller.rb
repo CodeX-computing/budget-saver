@@ -7,7 +7,7 @@ class GroupConversionsController < ApplicationController
 
     respond_to do |format|
       if @group_conversion.save
-        format.html { redirect_to group_path(group), notice: 'conversion was successfully added to group.' }
+        format.html { redirect_to group_path(group), notice: 'Transaction was successfully added to group.' }
         format.json { render :show, status: :created, location: @group_conversion }
       else
         format.html { render :new }
