@@ -23,7 +23,7 @@ class ConversionsController < ApplicationController
     @conversion.author_id = current_user.id
     respond_to do |format|
       if @conversion.save
-        format.html { redirect_to group_conversions_path, notice: 'Conversion was successfully created.' }
+        format.html { redirect_to group_conversions_path, notice: 'Transaction was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

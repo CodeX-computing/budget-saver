@@ -8,6 +8,10 @@ This app keps track of all your transctions
 - Rails
 - Postgresql
 
+## Live Demo
+
+- [✨Budget Saver](https://budget-saver-app.herokuapp.com/)
+
 ## Getting Started
 
 To start using this software you need to have Ruby installed in your machine
@@ -62,6 +66,10 @@ Ruby and rails installed on your local machine
 - GitHub: [@ismailco](https://github.com/ismailco)
 - Twitter: [@ismailcourr](https://twitter.com/ismailcourr)
 - LinkedIn: [Ismail courr](https://www.linkedin.com/in/ismailcourr)
+
+## Credits
+
+- Original design idea by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
 
 ## 🤝 Contributing
 
