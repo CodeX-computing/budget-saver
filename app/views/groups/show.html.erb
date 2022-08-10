@@ -14,7 +14,7 @@
         <p class="total-price">Total Transactions: $<%= @group.total_conversions %></p>
       </div>
     </div>
-    <% @group.group_conversions.each do |group_conversion| %>
+    <% @group.group_conversions.order(created_at: :desc).each do |group_conversion| %>
     <div class="category">
       <div class="category-unit">
         <div>
