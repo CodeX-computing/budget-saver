@@ -1,4 +1,4 @@
-# Budget save
+# Budget saver
 
 This app keps track of all your transctions
 
