@@ -1,21 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe "Groups", type: :system do
+RSpec.describe 'Groups', type: :system do
   before do
     driven_by(:rack_test)
 
-      visit '/users/sign_up'
+    visit '/users/sign_up'
 
-      fill_in 'Full name', with: 'ismail courr'
-      fill_in 'Email', with: 'test@email.com'
-      fill_in 'Password', with: 'test1234'
-      fill_in 'Confirm password', with: 'test1234'
-      click_on 'Next'
-      visit '/'
+    fill_in 'Full name', with: 'ismail courr'
+    fill_in 'Email', with: 'test@email.com'
+    fill_in 'Password', with: 'test1234'
+    fill_in 'Confirm password', with: 'test1234'
+    click_on 'Next'
+    visit '/'
   end
 
-  describe "Groups" do
-    it "should create a group" do
+  describe 'Groups' do
+    it 'should create a group' do
       click_on 'Add a new category'
       fill_in 'icon url e.g: https://images.com/pic.png', with: 'https://images.com/pic.png'
       fill_in 'Category name', with: 'Amazon'
@@ -26,7 +26,7 @@ RSpec.describe "Groups", type: :system do
       expect(page).to have_content '$0.0'
     end
 
-    it "should not create a group without a name" do
+    it 'should not create a group without a name' do
       click_on 'Add a new category'
       fill_in 'icon url e.g: https://images.com/pic.png', with: 'https://images.com/pic.png'
       fill_in 'Category name', with: ''
@@ -35,7 +35,7 @@ RSpec.describe "Groups", type: :system do
       expect(page).to have_content "Name can't be blank"
     end
 
-    it "should go the detail page of a group" do
+    it 'should go the detail page of a group' do
       click_on 'Add a new category'
       fill_in 'icon url e.g: https://images.com/pic.png', with: 'https://images.com/pic.png'
       fill_in 'Category name', with: 'Amazon'
@@ -47,7 +47,7 @@ RSpec.describe "Groups", type: :system do
       expect(page).to have_content 'Add a new transaction'
     end
 
-    it "should add a transaction to the app" do
+    it 'should add a transaction to the app' do
       click_on 'Add a new category'
       fill_in 'icon url e.g: https://images.com/pic.png', with: 'https://images.com/pic.png'
       fill_in 'Category name', with: 'Amazon'
@@ -62,7 +62,7 @@ RSpec.describe "Groups", type: :system do
       expect(page).to have_content 'Amazon'
     end
 
-    it "should add a transaction to a Group" do
+    it 'should add a transaction to a Group' do
       click_on 'Add a new category'
       fill_in 'icon url e.g: https://images.com/pic.png', with: 'https://images.com/pic.png'
       fill_in 'Category name', with: 'Amazon'

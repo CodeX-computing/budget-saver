@@ -1,21 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :system do
+RSpec.describe 'Users', type: :system do
   before do
     driven_by(:rack_test)
-    
+
     visit '/users/sign_up'
 
-      fill_in 'Full name', with: 'ismail courr'
-      fill_in 'Email', with: 'test@email.com'
-      fill_in 'Password', with: 'test1234'
-      fill_in 'Confirm password', with: 'test1234'
-      click_on 'Next'
-      click_on 'Sign out'
+    fill_in 'Full name', with: 'ismail courr'
+    fill_in 'Email', with: 'test@email.com'
+    fill_in 'Password', with: 'test1234'
+    fill_in 'Confirm password', with: 'test1234'
+    click_on 'Next'
+    click_on 'Sign out'
   end
 
-  describe "Users" do
-    it "should create a user" do
+  describe 'Users' do
+    it 'should create a user' do
       visit '/users/sign_up'
 
       fill_in 'Full name', with: 'ismail name'
@@ -27,7 +27,7 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content 'Welcome! You have signed up successfully'
     end
 
-    it "should not create a user with duplicate email" do
+    it 'should not create a user with duplicate email' do
       visit '/users/sign_up'
 
       fill_in 'Full name', with: 'ismail'
@@ -39,7 +39,7 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content 'Email has already been taken'
     end
 
-    it "should return password is short if it is less then 6 character long" do
+    it 'should return password is short if it is less then 6 character long' do
       visit '/users/sign_up'
 
       fill_in 'Full name', with: 'ismail courr'
@@ -51,7 +51,7 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content 'Password is too short (minimum is 6 characters)'
     end
 
-    it "should login a user" do
+    it 'should login a user' do
       visit '/users/sign_in'
       fill_in 'Email', with: 'test@email.com'
       fill_in 'Password', with: 'test1234'
@@ -60,7 +60,7 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content 'Signed in successfully'
     end
 
-    it "should not login a user with wrong password" do
+    it 'should not login a user with wrong password' do
       visit '/users/sign_in'
       fill_in 'Email', with: 'test@email.com'
       fill_in 'Password', with: 'test123'

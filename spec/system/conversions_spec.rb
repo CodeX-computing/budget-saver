@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Conversions", type: :system do
+RSpec.describe 'Conversions', type: :system do
   before do
     driven_by(:rack_test)
   end
 
-  describe "Conversions" do
-    it "should create a conversion" do
+  describe 'Conversions' do
+    it 'should create a conversion' do
       visit conversions_url
       click_on 'New conversion'
 
@@ -20,7 +20,7 @@ RSpec.describe "Conversions", type: :system do
       click_on 'Back'
     end
 
-    it "should update a conversion" do
+    it 'should update a conversion' do
       visit conversion_url(1)
       click_on 'Edit this conversion', match: :first
 
@@ -34,14 +34,14 @@ RSpec.describe "Conversions", type: :system do
       click_on 'Back'
     end
 
-    it "should destroy a conversion" do
+    it 'should destroy a conversion' do
       visit conversion_url(1)
       click_on 'Destroy this conversion', match: :first
 
       expect(page).to have_content 'Conversion was successfully destroyed'
     end
 
-    it "should not create a conversion without a name" do
+    it 'should not create a conversion without a name' do
       visit conversions_url
       click_on 'New conversion'
 
@@ -54,7 +54,7 @@ RSpec.describe "Conversions", type: :system do
       click_on 'Back'
     end
 
-    it "should not create a conversion without a user" do
+    it 'should not create a conversion without a user' do
       visit conversions_url
       click_on 'New conversion'
 
@@ -67,7 +67,7 @@ RSpec.describe "Conversions", type: :system do
       click_on 'Back'
     end
 
-    it "should not create a conversion without an amount" do
+    it 'should not create a conversion without an amount' do
       visit conversions_url
       click_on 'New conversion'
 
@@ -80,7 +80,7 @@ RSpec.describe "Conversions", type: :system do
       click_on 'Back'
     end
 
-    it "should not create a conversion without an author" do
+    it 'should not create a conversion without an author' do
       visit conversions_url
       click_on 'New conversion'
 
