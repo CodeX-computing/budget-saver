@@ -13,6 +13,8 @@
   align-items: center;
   background-color: #3778c2;
   padding: 5px 10px;
+  height: 10vh;
+  max-height: 50px;
 }
 
 .back-link {
@@ -24,6 +26,10 @@
 
 .nav-text {
   color: #fff;
+}
+
+.nav-text-new {
+  margin-right: -70px;
 }
 
 .login-submit-btn {

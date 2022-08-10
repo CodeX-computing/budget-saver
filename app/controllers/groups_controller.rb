@@ -1,9 +1,7 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show edit update destroy]
-
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = current_user.groups.all
   end
 
   # GET /groups/1 or /groups/1.json
@@ -27,11 +25,9 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_url(@group), notice: 'Group was successfully created.' }
-        format.json { render :show, status: :created, location: @group }
+        format.html { redirect_to groups_path, notice: 'Group was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,11 +56,6 @@ class GroupsController < ApplicationController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_group
-    @group = Group.find(params[:id])
-  end
 
   # Only allow a list of trusted parameters through.
   def group_params
