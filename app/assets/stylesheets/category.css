@@ -1,4 +1,15 @@
-.category {
+.categories,
+.details {
+  max-height: 84vh;
+  overflow-y: scroll;
+}
+
+.details {
+  max-height: 73vh;
+}
+
+.category,
+.detail {
   margin: 10px;
   padding: 10px;
   background-color: #fff;
@@ -40,7 +51,7 @@
   padding: 10px;
   background-color: #5fb523;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -57,4 +68,29 @@
   font-size: 1.2em;
   font-weight: bold;
   cursor: pointer;
+}
+
+.form-transaction {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-transaction-option select{
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+}
+
+.form-transaction-btn {
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 340px) {
+  .form-transaction {
+    flex-direction: column;
+  }
 }

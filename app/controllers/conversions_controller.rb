@@ -1,5 +1,4 @@
 class ConversionsController < ApplicationController
-  before_action :set_conversion, only: %i[show edit update destroy]
 
   # GET /conversions or /conversions.json
   def index
@@ -13,6 +12,7 @@ class ConversionsController < ApplicationController
   # GET /conversions/new
   def new
     @conversion = Conversion.new
+    @group = Group.find(params[:group_id])
   end
 
   # GET /conversions/1/edit
@@ -57,11 +57,6 @@ class ConversionsController < ApplicationController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_conversion
-    @conversion = Conversion.find(params[:id])
-  end
 
   # Only allow a list of trusted parameters through.
   def conversion_params

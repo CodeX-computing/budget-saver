@@ -1,27 +1,18 @@
 <%= form_with(model: conversion, url: group_conversions_path) do |form| %>
   <% if conversion.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(conversion.errors.count, "error") %> prohibited this conversion from being saved:</h2>
-
-      <ul>
         <% conversion.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <%= error.full_message %>
         <% end %>
-      </ul>
     </div>
   <% end %>
-
-
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.number_field :amount %>
+  <div class="navbar">
+    <%= link_to "🢀", "/groups/#{@group.id}", class: 'back-link'%>
+    <p class='nav-text nav-text-new'>NEW TRANSACTION</p>
+    <%= form.submit 'Create Transaction', class: 'login-submit-btn' %>
   </div>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-  <div>
-    <%= form.submit %>
+  <div class="login-fields">
+    <%= form.text_field :name, placeholder: 'Name', class: 'login-field' %>
+    <%= form.number_field :amount, step: 0.1, placeholder: 'Amount', class: 'login-field' %>
   </div>
 <% end %>
