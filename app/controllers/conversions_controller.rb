@@ -1,5 +1,4 @@
 class ConversionsController < ApplicationController
-
   # GET /conversions or /conversions.json
   def index
     @conversions = Conversion.where(author_id: current_user.id)

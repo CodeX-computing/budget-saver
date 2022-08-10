@@ -1,5 +1,4 @@
 class GroupsController < ApplicationController
-
   # GET /groups or /groups.json
   def index
     @groups = Group.all
