@@ -2,17 +2,42 @@
 
 This app keps track of all your transctions
 
+## Table of Contents
+
+- [Built with](#built-with)
+- [Live app](#live-demo)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Contributing](#🤝-contributing)
+
 ## Built With
 
-- Ruby
-- Rails
-- Postgresql
+- [Ruby](https://www.ruby-lang.org/)
+- [Rails](https://rubygems.org/gems/rails)
+- [Postgresql](https://www.postgresql.org/)
 
 ## Live Demo
 
 - [✨Budget Saver](https://budget-saver-app.herokuapp.com/)
 
-## Getting Started
+
+![](./screenshots/screenshot1.png)
+![](./screenshots/screenshot2.png)
+![](./screenshots/screenshot3.png)
+![](./screenshots/screenshot4.png)
+![](./screenshots/screenshot5.png)
+![](./screenshots/screenshot6.png)
+
+
+## Prerequisites
+
+For using the app you can use the Demo link above to see the app in action, no further prerequisites are needed.
+
+## Developments
+
+You should have `ruby on rails` and `postgresql` installed and running on your machine before you can start developing this app.
+
+### Getting Started
 
 To start using this software you need to have Ruby installed in your machine
 Then clone this repo:
@@ -49,15 +74,6 @@ To run rspec, in your terminal for testing the methods:
 -$ rspec
 ```
 
-### Prerequisites
-
-Ruby and rails installed on your local machine
-
-### Setup
-
-- Clone the GitHub Repository
-- Go to the Project Directory
-- Run `bundle install`
 
 ## Authors
 
