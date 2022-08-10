@@ -11,7 +11,7 @@
           <img src=<%= @group.icon %>" alt="<%= @group.name %>" />
           <%= link_to @group.name, group_path(@group), class: 'category-name' %>
         </div>
-        <p class="total-price"><%= @group.total_conversions %></p>
+        <p class="total-price">Total Transactions: $<%= @group.total_conversions %></p>
       </div>
     </div>
     <% @group.group_conversions.each do |group_conversion| %>

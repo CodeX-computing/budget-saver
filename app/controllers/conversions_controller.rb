@@ -23,11 +23,9 @@ class ConversionsController < ApplicationController
     @conversion.author_id = current_user.id
     respond_to do |format|
       if @conversion.save
-        format.html { redirect_to group_conversions_url(@conversion), notice: 'Conversion was successfully created.' }
-        format.json { render :show, status: :created, location: @conversion }
+        format.html { redirect_to group_conversions_path, notice: 'Conversion was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @conversion.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -37,10 +35,8 @@ class ConversionsController < ApplicationController
     respond_to do |format|
       if @conversion.update(conversion_params)
         format.html { redirect_to conversion_url(@conversion), notice: 'Conversion was successfully updated.' }
-        format.json { render :show, status: :ok, location: @conversion }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @conversion.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -51,7 +47,6 @@ class ConversionsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to conversions_url, notice: 'Conversion was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
