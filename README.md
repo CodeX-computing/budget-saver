@@ -1,4 +1,4 @@
-# Budget save
+# Budget saver
 
 ![](./public/splash.png)
 
