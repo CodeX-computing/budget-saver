@@ -1,5 +1,7 @@
 # Budget save
 
+![](./public/splash.png)
+
 This app keps track of all your transctions
 
 ## Table of Contents
@@ -20,14 +22,15 @@ This app keps track of all your transctions
 
 - [✨Budget Saver](https://budget-saver-app.herokuapp.com/)
 
-
-![](./screenshots/screenshot1.png)
-![](./screenshots/screenshot2.png)
-![](./screenshots/screenshot3.png)
-![](./screenshots/screenshot4.png)
-![](./screenshots/screenshot5.png)
-![](./screenshots/screenshot6.png)
-
+<details>
+  <summary><h2>Screenshots</h2></summary>
+  <img src="./screenshots/screenshot1.png") />
+  <img src="./screenshots/screenshot2.png") />
+  <img src="./screenshots/screenshot3.png") />
+  <img src="./screenshots/screenshot4.png") />
+  <img src="./screenshots/screenshot5.png") />
+  <img src="./screenshots/screenshot6.png") />
+</details>
 
 ## Prerequisites
 
